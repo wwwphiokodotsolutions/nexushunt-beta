@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  @apply bg-neutral-950 text-neutral-100 antialiased;
+}
+
+.cv-print {
+  @apply bg-white text-black p-8 max-w-[210mm] mx-auto shadow-lg;
+  min-height: 297mm;
+}
+
+@media print {
+  body { background: white; }
+  .no-print { display: none !important; }
+  .cv-print { box-shadow: none; margin: 0; }
+}
